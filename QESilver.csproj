@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="shaders\default_f.shader" />
+    <None Remove="shaders\default_v.shader" />
+    <None Remove="shaders\flat_f.shader" />
+    <None Remove="shaders\shaded_f.shader" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Command\" />
+    <Folder Include="Tool\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenTK.GLWpfControl" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="shaders\default_f.shader" />
+    <Resource Include="shaders\default_v.shader" />
+    <Resource Include="shaders\flat_f.shader" />
+    <Resource Include="shaders\shaded_f.shader" />
+  </ItemGroup>
+
+</Project>
